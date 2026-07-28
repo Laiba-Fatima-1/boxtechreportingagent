@@ -1,0 +1,23 @@
+# Render Blueprint — free Docker deploy, no credit card.
+#
+# Render reads this file automatically when you connect the repo.
+# Docs: https://render.com/docs/blueprint-spec
+#
+# The runtime honours Render's injected PORT variable: Next.js standalone
+# server.js reads process.env.PORT, so nothing extra is needed.
+
+services:
+  - type: web
+    name: boxtech-dashboard
+    runtime: docker
+    plan: free
+    region: frankfurt          # closest free region to Dubai/Karachi
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /
+    autoDeploy: true
+    envVars:
+      - key: NODE_ENV
+        value: production
+      # Next.js build is memory-hungry; give Node room on the free builder.
+      - key: NODE_OPTIONS
+        value: --max-old-space-size=768
