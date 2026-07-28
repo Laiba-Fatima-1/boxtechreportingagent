@@ -90,6 +90,17 @@ html, body {
   letter-spacing: -0.02em;
 }
 
+/* KPI values need a slightly tighter, more premium rhythm than the rest
+   of the interface so they feel deliberate rather than purely utilitarian. */
+.kpi-value {
+  font-family: var(--font-display), var(--font-inter), system-ui, sans-serif;
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+  letter-spacing: -0.045em;
+  line-height: 0.9;
+  text-rendering: geometricPrecision;
+}
+
 :focus-visible {
   outline: 2px solid var(--color-brand);
   outline-offset: 2px;

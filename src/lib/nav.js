@@ -89,7 +89,7 @@ export const NAV_GROUPS = [
 /** Pinned above the groups — the 3 screens used every day. */
 export const PRIMARY_LINKS = [
   { href: "/", label: "Dashboard", icon: "LayoutGrid" },
-  { href: "/ask-ai", label: "Ask AI", icon: "Sparkles", badge: "New" },
+  { href: "/ask-ai", label: "Ask AI", icon: "Sparkles" },
   { href: "/reports", label: "Report Builder", icon: "Table2" },
 ];
 

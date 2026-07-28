@@ -79,8 +79,8 @@ export default function KpiCard({ kpi, index = 0 }) {
       {/* value + delta pill */}
       <div className="px-4 pb-3 pt-3">
         <div
-          className={`numeric truncate text-[30px] font-bold leading-none ${
-            display.length > 9 ? "text-[24px]" : ""
+          className={`kpi-value truncate text-[29px] font-bold leading-none sm:text-[32px] ${
+            display.length > 9 ? "text-[24px] sm:text-[27px]" : ""
           } ${feature ? "text-white" : "text-ink"}`}
           title={display}
         >
